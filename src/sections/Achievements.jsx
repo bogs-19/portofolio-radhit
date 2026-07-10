@@ -1,6 +1,6 @@
 import React from "react";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { PinContainer } from "@/components/ui/3d-pin"; // Import PinContainer
+import { PinContainer } from "@/components/ui/3d-pin";
 
 // Data Pencapaian
 const topRowData = [
@@ -13,7 +13,7 @@ const topRowData = [
     {
         title: "Advanced English Proficiency",
         desc: "Achieved C1 level, enabling seamless cross-cultural communication and professional mentoring.",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2560&auto=format&fit=crop",
+        image: "/images/inggris.png",
         link: "/documents/Sertifikat_GSA.pdf"
     },
     {
@@ -32,7 +32,7 @@ const topRowData = [
     {
         title: "Academic Acceleration Scholar",
         desc: "Awarded a prestigious merit scholarship in 8th grade (2 KMI) for exceptional academic acceleration.",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2560&auto=format&fit=crop",
+        image: "/images/classFive.png",
         link: "/documents/Sertifikat_GSA.pdf"
     }
 ];
@@ -41,12 +41,12 @@ const bottomRowData = [
     {
         title: "Advanced Arabic Proficiency",
         desc: "Achieved C1 level mastery acquired through immersive daily practice and intensive linguistic training.",
-        image: "https://images.unsplash.com/photo-1584281722370-161e12720d5c?q=80&w=2560&auto=format&fit=crop"
+        image: "/images/arab.png"
     },
     {
         title: "Academic Excellence Award",
         desc: "Secured a highly competitive academic scholarship during the 11th grade (5 KMI) recognizing sustained high achievement.",
-        image: "https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=2560&auto=format&fit=crop"
+        image: "/images/transkip.png"
     },
     {
         title: "GSA Prompt Relay",
@@ -67,22 +67,38 @@ const bottomRowData = [
     }
 ];
 
-// Komponen Card Bento yang DIBUNGKUS 3D PIN
-const BentoCard = ({ title, desc, image, link }) => (
-    // Membutuhkan jarak ekstra agar efek 3D Pin tidak terpotong (h-[20rem])
-    <div className="mx-4 flex h-[20rem] w-80 items-center justify-center">
+const BentoCard = ({ title, desc, image, link, imgPos }) => (
+    <div className="mx-4 flex h-[22rem] w-80 items-center justify-center">
 
-        {/* PinContainer dipanggil di sini. href mengarah ke file PDF di folder public/documents */}
         <PinContainer title="See More (Download PDF)" href={link || "/documents/Detail_Kegiatan.pdf"}>
 
-            <div className="group flex h-64 w-80 flex-col overflow-hidden rounded-2xl border border-black/20 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900/50 backdrop-blur-md transition-colors hover:border-lime-500/50 dark:hover:border-lime-500/50 hover:bg-neutral-50 dark:hover:bg-neutral-900 shadow-sm dark:shadow-none">
-                <div className="h-32 w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800">
-                    <img src={image} alt={title} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110" />
+            <div className="group relative flex h-72 w-80 flex-col overflow-hidden rounded-[2.5rem] bg-[#e0e5ec]/20 dark:bg-[#1a1b1e]/40 backdrop-blur-2xl transition-all duration-500">
+
+                <div className="relative z-10 flex h-full w-full flex-col">
+
+                    <div className="relative h-[75%] w-full shrink-0 overflow-hidden bg-black/5">
+                        <img
+                            src={image}
+                            alt={title}
+                            className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 ${imgPos ? imgPos : 'object-center'}`}
+                        />
+                    </div>
+
+                    <div className="relative flex h-[25%] w-full flex-col justify-center px-5 py-3 overflow-hidden">
+                        <h3 className="text-[14px] font-bold text-neutral-900 dark:text-white truncate drop-shadow-sm leading-tight">
+                            {title}
+                        </h3>
+                        <p className="mt-1 text-[11px] text-neutral-700 dark:text-neutral-300 leading-tight line-clamp-2">
+                            {desc}
+                        </p>
+                    </div>
                 </div>
-                <div className="flex flex-1 flex-col justify-center p-5">
-                    <h3 className="text-lg font-bold text-black dark:text-white line-clamp-1">{title}</h3>
-                    <p className="mt-2 text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-2">{desc}</p>
+
+                <div className="pointer-events-none absolute inset-0 z-30 rounded-[2.5rem] border border-white/50 dark:border-white/20 shadow-[inset_6px_6px_16px_rgba(255,255,255,0.7),inset_-6px_-6px_16px_rgba(0,0,0,0.1)] dark:shadow-[inset_6px_6px_16px_rgba(255,255,255,0.15),inset_-6px_-6px_16px_rgba(0,0,0,0.4)] transition-all duration-500 group-hover:shadow-[inset_6px_6px_16px_rgba(255,255,255,0.8),inset_-6px_-6px_16px_rgba(0,0,0,0.1),0_0_25px_rgba(132,204,22,0.3)] dark:group-hover:shadow-[inset_6px_6px_16px_rgba(255,255,255,0.2),inset_-6px_-6px_16px_rgba(0,0,0,0.4),0_0_25px_rgba(132,204,22,0.3)]">
+
+                    <div className="absolute inset-x-3 top-1 h-6 bg-gradient-to-b from-white/50 dark:from-white/10 to-transparent rounded-t-[2rem]"></div>
                 </div>
+
             </div>
 
         </PinContainer>
@@ -105,15 +121,13 @@ export default function Achievements() {
 
                 <div className="mt-4 max-w-2xl mx-auto">
                     <TextGenerateEffect
-                        words="Kepemimpinan, public speaking, dan kegiatan ekstrakurikuler."
+                        words="Leadership, public speaking, and extracurricular impact"
                         className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg"
                     />
                 </div>
             </div>
 
-            {/* Baris Atas: Gerak ke Kanan (Ditambahkan group hover pause) */}
             <div className="relative flex w-full overflow-hidden mb-6 group">
-                {/* hover:[animation-play-state:paused] agar user bisa mengklik pin dengan tenang */}
                 <div className="animate-marquee-right flex group-hover:[animation-play-state:paused]">
                     {[...topRowData, ...topRowData].map((item, i) => (
                         <BentoCard key={`top-${i}`} {...item} />
@@ -121,7 +135,6 @@ export default function Achievements() {
                 </div>
             </div>
 
-            {/* Baris Bawah: Gerak ke Kiri (Ditambahkan group hover pause) */}
             <div className="relative flex w-full overflow-hidden group">
                 <div className="animate-marquee-left flex group-hover:[animation-play-state:paused]">
                     {[...bottomRowData, ...bottomRowData].map((item, i) => (
@@ -130,7 +143,6 @@ export default function Achievements() {
                 </div>
             </div>
 
-            {/* Gradasi penutup di tepi kiri dan kanan */}
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white/80 dark:from-black/80 to-transparent z-20"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white/80 dark:from-black/80 to-transparent z-20"></div>
 

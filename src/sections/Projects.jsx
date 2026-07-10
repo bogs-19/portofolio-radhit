@@ -2,17 +2,17 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
-// Data proyek (Bisa kamu pindahkan ke src/data/index.js nanti jika makin banyak)
+// Data proyek
 const projectsData = [
     {
         id: 1,
-        title: "Stokie - Custom ERP & POS System",
-        description: "Developed and deployed a comprehensive web-based inventory management and Point-of-Sale system. Streamlined supply chain logistics and automated financial reporting to optimize operations for culinary enterprises.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-        tags: ["JavaScript", "Oracle APEX", "Database Design", "System Architecture"],
-        category: "Software Engineering",
-        detailsPdf: "/docs/stokie-case-study.pdf", // Mengarah ke PDF untuk di-download
-        liveLink: "https://link-ke-aplikasi-stokie.com",
+        title: "Chat-Health",
+        description: "Sistem Terdistribusi Multi-Agen berbasis ruang obrolan untuk mentransformasi krisis triase kesehatan. Memadukan Frontend React, Backend Express.js, dan Agen Python otonom (Band SDK) yang digerakkan oleh model Llama 3.3 70B.",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000",
+        tags: ["React", "Express.js", "Python", "Band SDK", "Llama 3.3"],
+        category: "Healthcare AI",
+        detailsPdf: "/docs/ai-patient-navigator-blueprint.pdf",
+        liveLink: "#",
     },
     {
         id: 2,
@@ -28,8 +28,7 @@ const projectsData = [
         id: 3,
         title: "GSA Campaign: Gemini Prompt Relay",
         description: "Conceptualized and executed an interactive AI collaborative event. Facilitated cross-disciplinary teamwork by educating participants on structured prompt engineering to generate cohesive visual assets using Generative AI.",
-        image: "/images/event.jpeg",
-        imgPos: "object-top",
+        image: "/images/gsa3.jpeg",
         tags: ["Generative AI", "Prompt Engineering", "Event Management"],
         category: "Community Leadership",
         detailsPdf: "/docs/gsa-event-prompt-relay.pdf",
@@ -56,104 +55,99 @@ const projectsData = [
         link: "#",
     },
     {
-        id: 6, // Pastikan ID ini unik / melanjutkan nomor terakhirmu
+        id: 6,
         title: "AI ATS CV Analyzer",
         description: "Platform cerdas berbasis AI untuk menganalisis kecocokan CV dengan pekerjaan impian. Menampilkan persentase ATS Score, evaluasi detail, serta rekomendasi langkah demi langkah untuk pengoptimalan CV.",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000", // Gambar default resume/analisis
+        image: "/images/Chatbot.png",
         tags: ["React", "Tailwind CSS", "Gemini AI API"],
         category: "Artificial Intelligence",
         detailsPdf: "/docs/ai-ats-cv-analyzer-case-study.pdf",
-        liveLink: "https://link-ke-web-ai-kamu.vercel.app",
+        liveLink: "https://gsa-ats-bot-fqmueya8a7dwakalnsqjim.streamlit.app/",
     }
 ];
 
 export default function Projects() {
     return (
         <section id="projects" className="relative w-full overflow-hidden px-4 py-20 z-10 transition-colors duration-500 bg-transparent">
-            {/* Header Section */}
             <div className="mx-auto max-w-7xl text-center mb-10 flex flex-col items-center justify-center">
                 <div className="inline-block pb-3">
                     <TextGenerateEffect
                         words="Selected Works"
-                        className="text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-5xl"
+                        className="text-3xl font-bold text-neutral-800 dark:text-neutral-100 sm:text-4xl md:text-5xl drop-shadow-sm"
                     />
                 </div>
 
                 <div className="mt-4 max-w-2xl mx-auto">
                     <TextGenerateEffect
                         words="Dari pengembangan perangkat lunak terstruktur hingga advokasi teknologi komunitas."
-                        className="text-gray-400 text-base md:text-lg"
+                        className="text-neutral-500 dark:text-neutral-400 text-base md:text-lg"
                     />
                 </div>
             </div>
 
-            {/* Grid Cards */}
-            <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8">
+            <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-10">
                 {projectsData.map((project) => (
                     <CardContainer key={project.id} className="inter-var">
-                        <CardBody className="group/card relative h-auto w-auto sm:w-md md:w-120 rounded-xl border border-black/20 dark:border-white/10 bg-neutral-100 dark:bg-neutral-950 
-                                    shadow-[0_0_20px_rgba(163,230,53,0.1)] 
-                                    hover:shadow-[0_0_30px_rgba(163,230,53,0.4)] 
-                                    p-6 transition-all duration-300">
-                            {/* Judul Proyek */}
+                        <CardBody className="group/card relative h-auto w-full max-w-[22rem] md:max-w-md rounded-3xl p-6 md:p-8 
+                            bg-[#E0E5EC] dark:bg-[#1a1b1e] 
+                            border border-[#E0E5EC] dark:border-[#1a1b1e]
+                            shadow-[12px_12px_24px_#a3b1c6,-12px_-12px_24px_#ffffff] 
+                            dark:shadow-[12px_12px_24px_rgba(0,0,0,0.6),-12px_-12px_24px_rgba(255,255,255,0.08)] 
+                            transition-all duration-300 will-change-transform">
+
                             <CardItem
-                                translateZ="50" className="text-2xl font-bold text-black
-                                dark:text-white leading-tight"
+                                translateZ="50"
+                                className="text-2xl font-extrabold text-neutral-800 dark:text-white leading-tight"
                             >
                                 {project.title}
                             </CardItem>
 
-                            {/* Deskripsi */}
                             <CardItem
                                 as="p"
                                 translateZ="60"
-                                className="mt-4 max-w-sm text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed"
+                                className="mt-4 max-w-sm text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed font-medium"
                             >
                                 {project.description}
                             </CardItem>
 
-                            {/* Gambar Proyek */}
-                            <CardItem translateZ="100" className="mt-6 w-full">
+                            <CardItem translateZ="100" className="mt-8 w-full rounded-2xl p-2 bg-[#E0E5EC] dark:bg-[#1a1b1e] shadow-[inset_6px_6px_12px_#a3b1c6,inset_-6px_-6px_12px_#ffffff] dark:shadow-[inset_6px_6px_12px_rgba(0,0,0,0.8),inset_-6px_-6px_12px_rgba(255,255,255,0.05)]">
                                 <img
                                     src={project.image}
-                                    height="1000"
-                                    width="1000"
-                                    className="h-60 w-full rounded-xl object-cover group-hover/card:shadow-xl border border-white/5"
+                                    className="h-56 w-full rounded-xl object-cover transition-all duration-500 group-hover/card:brightness-110"
                                     alt={project.title}
                                 />
                             </CardItem>
 
-                            {/* Tags Tech Stack */}
-                            <CardItem translateZ="40" className="mt-4 flex flex-wrap gap-2">
+                            <CardItem translateZ="40" className="mt-8 flex flex-wrap gap-3">
                                 {project.tags.map((tag, index) => (
-                                    <span key={index} className="rounded-full bg-lime-500/10 px-3 py-1 text-xs font-medium text-lime-400 border border-lime-500/20">
+                                    <span
+                                        key={index}
+                                        className="rounded-full px-4 py-1.5 text-xs font-bold text-lime-600 dark:text-lime-400 bg-[#E0E5EC] dark:bg-[#1a1b1e] shadow-[4px_4px_8px_#a3b1c6,-4px_-4px_8px_#ffffff] dark:shadow-[4px_4px_8px_rgba(0,0,0,0.6),-4px_-4px_8px_rgba(255,255,255,0.08)]"
+                                    >
                                         {tag}
                                     </span>
                                 ))}
                             </CardItem>
 
-                            {/* Tombol Aksi */}
-                            <div className="mt-8 flex flex-wrap gap-4 items-center justify-between">
+                            <div className="mt-10 flex flex-wrap gap-4 items-center justify-between">
 
-                                {/* Tombol 1: DOWNLOAD PDF */}
                                 <CardItem
                                     translateZ={20}
                                     as="a"
-                                    href={project.detailsPdf} // Berubah dari project.link menjadi project.detailsPdf
-                                    download // Menambahkan fungsi agar file langsung di-download
-                                    className="rounded-xl px-4 py-2 text-xs font-normal text-white hover:text-lime-400 transition-colors"
+                                    href={project.detailsPdf}
+                                    download
+                                    className="rounded-xl px-6 py-3 text-xs font-bold text-neutral-600 dark:text-neutral-300 bg-[#E0E5EC] dark:bg-[#1a1b1e] shadow-[6px_6px_12px_#a3b1c6,-6px_-6px_12px_#ffffff] dark:shadow-[6px_6px_12px_rgba(0,0,0,0.6),-6px_-6px_12px_rgba(255,255,255,0.08)] hover:shadow-[inset_4px_4px_8px_#a3b1c6,inset_-4px_-4px_8px_#ffffff] dark:hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.8),inset_-4px_-4px_8px_rgba(255,255,255,0.06)] transition-all active:scale-95"
                                 >
                                     View Details ↓
                                 </CardItem>
 
-                                {/* Tombol 2: BUKA LIVE DEMO / WEB */}
                                 <CardItem
-                                    translateZ={20}
-                                    as="a" // Berubah dari "button" menjadi "a" (link)
-                                    href={project.liveLink || project.link} // Memanggil properti liveLink
-                                    target="_blank" // Membuka di tab baru
+                                    translateZ={30}
+                                    as="a"
+                                    href={project.liveLink || project.link}
+                                    target="_blank"
                                     rel="noopener noreferrer"
-                                    className="rounded-xl bg-lime-500 px-4 py-2 text-xs font-bold text-black transition-colors hover:bg-lime-400"
+                                    className="rounded-xl px-6 py-3 text-xs font-bold text-lime-600 dark:text-lime-400 bg-[#E0E5EC] dark:bg-[#1a1b1e] shadow-[6px_6px_12px_#a3b1c6,-6px_-6px_12px_#ffffff] dark:shadow-[6px_6px_12px_rgba(0,0,0,0.6),-6px_-6px_12px_rgba(255,255,255,0.08)] hover:shadow-[inset_4px_4px_8px_#a3b1c6,inset_-4px_-4px_8px_#ffffff] dark:hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.8),inset_-4px_-4px_8px_rgba(255,255,255,0.06)] transition-all active:scale-95"
                                 >
                                     Live Demo ↗
                                 </CardItem>
