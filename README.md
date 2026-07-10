@@ -1,16 +1,21 @@
-# React + Vite
+# Portfolio Website - Bagus Radhit Pratama
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selamat datang di repositori kode sumber untuk website portofolio pribadi saya. Website ini dibangun untuk menampilkan perjalanan akademis, keahlian teknis, dan pencapaian saya sebagai mahasiswa Informatika.
 
-Currently, two official plugins are available:
+## 🚀 Teknologi yang Digunakan
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion & Aceternity UI
+- **Language:** JavaScript/TypeScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Fitur Utama
+- **Interactive UI:** Menggunakan komponen modern dari Aceternity UI.
+- **Visual Effects:** Implementasi Wavy Background, Lamp Effect, dan Gemini Effect untuk estetika futuristik.
+- **Portfolio Showcase:** Menampilkan proyek-proyek, hard skill, soft skill, dan pencapaian akademik.
+- **Responsive Design:** Tampilan yang dioptimalkan untuk perangkat mobile dan desktop.
 
-## React Compiler
+## 📦 Cara Menjalankan Secara Lokal
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone repositori ini:
+   ```bash
+   git clone [https://github.com/bogs-19/portofolio-radhit.git](https://github.com/bogs-19/portofolio-radhit.git)
