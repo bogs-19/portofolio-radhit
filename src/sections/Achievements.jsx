@@ -41,28 +41,28 @@ const bottomRowData = [
     {
         title: "Advanced Arabic Proficiency",
         desc: "Achieved C1 level mastery acquired through immersive daily practice and intensive linguistic training.",
-        image: "/images/arab.png"
+        image: "/portofolio-radhit/images/arab.png"
     },
     {
         title: "Academic Excellence Award",
         desc: "Secured a highly competitive academic scholarship during the 11th grade (5 KMI) recognizing sustained high achievement.",
-        image: "/images/transkip.png"
+        image: "/portofolio-radhit/images/transkip.png"
     },
     {
         title: "GSA Prompt Relay",
         desc: "Initiated a collaborative generative AI prompt engineering competition for university students.",
-        image: "/images/gsa3.jpeg",
+        image: "/portofolio-radhit/images/gsa3.jpeg",
         imgPos: "object-bottom"
     },
     {
         title: "Virtual HRD Simulation",
         desc: "Pioneered high-pressure interview stress tests utilizing Gemini Live's advanced voice capabilities.",
-        image: "/images/gsa2.jpeg"
+        image: "/portofolio-radhit/images/gsa2.jpeg"
     },
     {
         title: "Community Volunteering",
         desc: "Dedicated volunteer committed to driving social impact and assisting in community-driven initiatives.",
-        image: "/images/volunteer1.jpeg",
+        image: "/portofolio-radhit/images/volunteer1.jpeg",
         imgPos: "object-top"
     }
 ];
