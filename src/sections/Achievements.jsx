@@ -70,7 +70,8 @@ const bottomRowData = [
 const BentoCard = ({ title, desc, image, link, imgPos }) => (
     <div className="mx-4 flex h-[22rem] w-80 items-center justify-center">
 
-        <PinContainer title="See More (Download PDF)" href={link || "/documents/Detail_Kegiatan.pdf"}>
+        {/* PERUBAHAN HANYA DI BARIS INI: Menggunakan variabel {title} dan menghapus href */}
+        <PinContainer title={title}>
 
             <div className="group relative flex h-72 w-80 flex-col overflow-hidden rounded-[2.5rem] bg-[#e0e5ec]/20 dark:bg-[#1a1b1e]/40 backdrop-blur-2xl transition-all duration-500">
 

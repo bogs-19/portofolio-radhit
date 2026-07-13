@@ -11,7 +11,7 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000",
         tags: ["React", "Express.js", "Python", "Band SDK", "Llama 3.3"],
         category: "Healthcare AI",
-        detailsPdf: "/docs/ai-patient-navigator-blueprint.pdf",
+        detailsPdf: "/docs/ChatHealth.pdf",
         liveLink: "#",
     },
     {
@@ -141,16 +141,19 @@ export default function Projects() {
                                     View Details ↓
                                 </CardItem>
 
-                                <CardItem
-                                    translateZ={30}
-                                    as="a"
-                                    href={project.liveLink || project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="rounded-xl px-6 py-3 text-xs font-bold text-lime-600 dark:text-lime-400 bg-[#E0E5EC] dark:bg-[#1a1b1e] shadow-[6px_6px_12px_#a3b1c6,-6px_-6px_12px_#ffffff] dark:shadow-[6px_6px_12px_rgba(0,0,0,0.6),-6px_-6px_12px_rgba(255,255,255,0.08)] hover:shadow-[inset_4px_4px_8px_#a3b1c6,inset_-4px_-4px_8px_#ffffff] dark:hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.8),inset_-4px_-4px_8px_rgba(255,255,255,0.06)] transition-all active:scale-95"
-                                >
-                                    Live Demo ↗
-                                </CardItem>
+                                {/* CONDITIONAL RENDERING: Tombol hanya muncul jika ID proyek adalah 6 */}
+                                {project.id === 6 && (
+                                    <CardItem
+                                        translateZ={30}
+                                        as="a"
+                                        href={project.liveLink || project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="rounded-xl px-6 py-3 text-xs font-bold text-lime-600 dark:text-lime-400 bg-[#E0E5EC] dark:bg-[#1a1b1e] shadow-[6px_6px_12px_#a3b1c6,-6px_-6px_12px_#ffffff] dark:shadow-[6px_6px_12px_rgba(0,0,0,0.6),-6px_-6px_12px_rgba(255,255,255,0.08)] hover:shadow-[inset_4px_4px_8px_#a3b1c6,inset_-4px_-4px_8px_#ffffff] dark:hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.8),inset_-4px_-4px_8px_rgba(255,255,255,0.06)] transition-all active:scale-95"
+                                    >
+                                        Live Demo ↗
+                                    </CardItem>
+                                )}
 
                             </div>
                         </CardBody>
