@@ -7,13 +7,13 @@ const topRowData = [
     {
         title: "Google Student Ambassador",
         desc: "Candidate for 2026, spearheading campus-wide technology initiatives and AI literacy programs.",
-        image: "./images/gsa.jpeg",
+        image: "/portofolio-radhit/images/gsa.jpeg",
         link: "./documents/Sertifikat_GSA.pdf"
     },
     {
         title: "Advanced English Proficiency",
         desc: "Achieved C1 level, enabling seamless cross-cultural communication and professional mentoring.",
-        image: "./images/inggris.png",
+        image: "/portofolio-radhit/images/inggris.png",
         link: "./documents/Sertifikat_GSA.pdf"
     },
     {
@@ -25,14 +25,14 @@ const topRowData = [
     {
         title: "GSA Career Hack Initiative",
         desc: "Designed an interactive seminar utilizing Google NotebookLM for advanced corporate research.",
-        image: "./images/aing.jpeg",
+        image: "/portofolio-radhit/images/aing.jpeg",
         link: "./documents/Sertifikat_GSA.pdf",
         imgPos: "object-top"
     },
     {
         title: "Academic Acceleration Scholar",
         desc: "Awarded a prestigious merit scholarship in 8th grade (2 KMI) for exceptional academic acceleration.",
-        image: "./images/classFive.png",
+        image: "/portofolio-radhit/images/classFive.png",
         link: "./documents/Sertifikat_GSA.pdf"
     }
 ];
