@@ -17,7 +17,7 @@ export default function Experience() {
                 </div>
             ),
             designation: "Google • Apr 2026 - Present (Part-time, Hybrid)",
-            src: "/images/gsa.jpeg",
+            src: "./images/gsa.jpeg",
         },
         {
             quote:
@@ -31,7 +31,7 @@ export default function Experience() {
                 </div>
             ),
             designation: "University of Muhammadiyah Malang • Aug 2025 - Present (Full-time)",
-            src: "/images/studentinfor.jpeg",
+            src: "./images/studentinfor.jpeg",
         },
         {
             quote:
@@ -45,7 +45,7 @@ export default function Experience() {
                 </div>
             ),
             designation: "Darussalam Gontor Modern Islamic Institution • May 2024 - May 2025 (Full-time)",
-            src: "/images/guru.jpeg",
+            src: "./images/guru.jpeg",
         },
         {
             quote:
@@ -59,7 +59,7 @@ export default function Experience() {
                 </div>
             ),
             designation: "Darussalam Gontor Modern Islamic Institution • Dec 2024 - May 2025 (Part-time)",
-            src: "/images/LAC.JPG",
+            src: "./images/LAC.JPG",
         },
         {
             quote:
@@ -73,7 +73,7 @@ export default function Experience() {
                 </div>
             ),
             designation: "Darussalam Gontor Modern Islamic Institution • Mar 2023 - May 2024 (Part-time)",
-            src: "/images/aing.jpeg",
+            src: "./images/aing.jpeg",
         },
     ];
 

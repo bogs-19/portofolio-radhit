@@ -7,33 +7,33 @@ const topRowData = [
     {
         title: "Google Student Ambassador",
         desc: "Candidate for 2026, spearheading campus-wide technology initiatives and AI literacy programs.",
-        image: "/images/gsa.jpeg",
-        link: "/documents/Sertifikat_GSA.pdf"
+        image: "./images/gsa.jpeg",
+        link: "./documents/Sertifikat_GSA.pdf"
     },
     {
         title: "Advanced English Proficiency",
         desc: "Achieved C1 level, enabling seamless cross-cultural communication and professional mentoring.",
-        image: "/images/inggris.png",
-        link: "/documents/Sertifikat_GSA.pdf"
+        image: "./images/inggris.png",
+        link: "./documents/Sertifikat_GSA.pdf"
     },
     {
         title: "1st Place National Math Olympiad",
         desc: "Secured 1st place at the Regency level National Science Olympiad (OSN) in Mathematics.",
         image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2560&auto=format&fit=crop",
-        link: "/documents/Sertifikat_GSA.pdf"
+        link: "./documents/Sertifikat_GSA.pdf"
     },
     {
         title: "GSA Career Hack Initiative",
         desc: "Designed an interactive seminar utilizing Google NotebookLM for advanced corporate research.",
-        image: "/images/aing.jpeg",
-        link: "/documents/Sertifikat_GSA.pdf",
+        image: "./images/aing.jpeg",
+        link: "./documents/Sertifikat_GSA.pdf",
         imgPos: "object-top"
     },
     {
         title: "Academic Acceleration Scholar",
         desc: "Awarded a prestigious merit scholarship in 8th grade (2 KMI) for exceptional academic acceleration.",
-        image: "/images/classFive.png",
-        link: "/documents/Sertifikat_GSA.pdf"
+        image: "./images/classFive.png",
+        link: "./documents/Sertifikat_GSA.pdf"
     }
 ];
 

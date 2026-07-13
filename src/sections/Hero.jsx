@@ -66,7 +66,7 @@ export default function Hero() {
                     </div>
 
                     <img
-                        src="/images/aing.png"
+                        src="./images/aing.png"
                         alt="Bagus Radhit Pratama"
                         className="absolute bottom-0 z-10 h-[105%] sm:h-[115%] md:h-[125%] max-h-[40rem] w-auto max-w-none object-contain object-bottom drop-shadow-[0_25px_25px_rgba(0,0,0,0.2)] dark:drop-shadow-[0_25px_25px_rgba(0,0,0,0.7)] pointer-events-none"
                     />
